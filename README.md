@@ -7,6 +7,10 @@
   A BYOK (Bring Your Own Key) open-source AI canvas for generating, manipulating, and editing images with AI models.
 </p>
 
+<p>
+  <b>Try it</b> at <a href="https://koubou.app/">https://koubou.app</a>
+</p>
+
 ---
 
 ## ✨ V1 Features
