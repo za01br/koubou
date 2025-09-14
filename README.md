@@ -15,9 +15,6 @@
 
 > **Note:** Google requires billing enabled to use Nano Banana via API. [Learn More](https://ai.google.dev/gemini-api/docs/billing)
 
-
----
-
 ---
 
 ## How to Use it
