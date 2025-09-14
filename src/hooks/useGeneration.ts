@@ -164,6 +164,8 @@ export function useGeneration(apiKey: string, setConfigOpen: (open: boolean) => 
         img.src = dataUrl;
       } catch (err) {
         console.error("Generation error:", err);
+        const placeholderImageId = generationMapRef.current[requestId];
+        setImages((prev) => prev.filter(img => img.id !== placeholderImageId));
         if (err instanceof Error && err.message.includes("429")) {
           toast.error(BillingErrorToast());
         }
