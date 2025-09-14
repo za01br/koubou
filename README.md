@@ -13,7 +13,9 @@
 
 ---
 
-## ✨ V1 Features
+## V1 Features
+
+###### (09/14/25)
 
 - [x] Text-to-Image generation
 - [x] Image-to-Image editing
@@ -26,7 +28,7 @@
 
 ---
 
-## 📝 V2 Roadmap
+## V2 Roadmap
 
 - [ ] Support for more models/services (OpenAI, Replicate, fal.ai)
 - [ ] Improve experience for mobile devices
@@ -36,7 +38,7 @@
 
 ---
 
-## 🛠️ Stack
+## Stack
 
 - **Bun**: A fast all-in-one JavaScript runtime.
 - **Vite**: A next-generation frontend tooling.
@@ -47,7 +49,7 @@
 
 ---
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 To get this project up and running on your local machine, follow these steps:
 
@@ -80,6 +82,6 @@ Licensed under the [MIT license](https://github.com/za01br/koubou/blob/main/LICE
 
 ---
 
-## 💡 Open to Requests
+## Open to Requests
 
 If you have a feature request, bug report, or any other feedback, please open an issue.
