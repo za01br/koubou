@@ -1,7 +1,9 @@
 import { useState, useMemo, useCallback, useRef } from 'react';
 import { GoogleGenAI } from "@google/genai";
+import { toast } from "sonner";
 import type { CanvasImageData } from '@/lib/types';
 import { generateId, makePlaceholderSVGDataUrl, dataUrlToBase64AndMime } from '@/lib/utils';
+import { BillingErrorToast } from '@/components/canvas/BillingErrorToast';
 
 export function useGeneration(apiKey: string, setConfigOpen: (open: boolean) => void, images: CanvasImageData[], setImages: (images: CanvasImageData[] | ((prev: CanvasImageData[]) => CanvasImageData[])) => void, getCurrentCenterPosition: () => { x: number; y: number }) {
   const [isGenerating, setIsGenerating] = useState(false);
@@ -162,6 +164,9 @@ export function useGeneration(apiKey: string, setConfigOpen: (open: boolean) => 
         img.src = dataUrl;
       } catch (err) {
         console.error("Generation error:", err);
+        if (err instanceof Error && err.message.includes("429")) {
+          toast.error(BillingErrorToast());
+        }
         setIsGenerating(false);
         setShouldBlur(false);
       }
