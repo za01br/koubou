@@ -8,7 +8,7 @@
 </p>
 
 <p>
-  <b>Try it</b> at <a href="https://koubou.app/">https://koubou.app</a>
+  <b>Try it</b> at <a href="https://koubou.app/">koubou.app</a>
 </p>
 
 ---
@@ -26,7 +26,7 @@
 
 ---
 
-## 📝 TODO
+## 📝 V2 Roadmap
 
 - [ ] Support for more models/services (OpenAI, Replicate, fal.ai)
 - [ ] Improve experience for mobile devices
@@ -74,9 +74,9 @@ To get this project up and running on your local machine, follow these steps:
 
 ---
 
-## 🤝 Open Source
+## License
 
-This project is open source and licensed under the MIT License. Feel free to use, modify, and distribute it.
+Licensed under the [MIT license](https://github.com/za01br/koubou/blob/main/LICENSE).
 
 ---
 
