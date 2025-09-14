@@ -13,6 +13,18 @@
 
 ![Koubou Demo](./demo_frame.png)
 
+> **Note:** Google requires billing enabled to use Nano Banana via API. [Learn More](https://ai.google.dev/gemini-api/docs/billing)
+
+
+---
+
+---
+
+## How to Use it
+
+- **Image Generation:** Just type any prompt in the text and submit.
+- **Image Editing:** Select one or more images, then type your prompt and submit.
+
 ---
 
 ## V1 Features
