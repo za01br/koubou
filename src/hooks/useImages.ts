@@ -130,22 +130,6 @@ export function useImages() {
   }, [copiedImage]);
 
   useEffect(() => {
-    const handlePaste = async (e: ClipboardEvent) => {
-      const items = (e.clipboardData as DataTransfer)?.items;
-      if (!items) return;
-
-      for (let i = 0; i < items.length; i++) {
-        const item = items[i];
-        if (item.type.indexOf("image") !== -1) {
-          const file = item.getAsFile();
-          if (file) {
-            // We need to pass getCurrentCenterPosition here
-            // This will be handled in App.tsx
-          }
-        }
-      }
-    };
-
     const handleKeyDown = (e: KeyboardEvent) => {
       if (document.activeElement?.tagName.toLocaleLowerCase() === "input")
         return;
@@ -169,11 +153,9 @@ export function useImages() {
       }
     };
 
-    document.addEventListener("paste", handlePaste);
     document.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      document.removeEventListener("paste", handlePaste);
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [selectedImages, copySelectedImage, pasteCopiedImage]);

@@ -115,6 +115,29 @@ function App() {
   );
 
   useEffect(() => {
+    const handlePaste = async (e: ClipboardEvent) => {
+      const items = (e.clipboardData as DataTransfer)?.items;
+      if (!items) return;
+
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        if (item.type.indexOf("image") !== -1) {
+          const file = item.getAsFile();
+          if (file) {
+            await addImageToCanvas(file, i, getCurrentCenterPosition);
+          }
+        }
+      }
+    };
+
+    document.addEventListener("paste", handlePaste);
+
+    return () => {
+      document.removeEventListener("paste", handlePaste);
+    };
+  }, [addImageToCanvas, getCurrentCenterPosition]);
+
+  useEffect(() => {
     if (trRef.current) {
       const selectedNodes = Array.from(selectedImages)
         .map((id) => imageRefs.current.get(id))
