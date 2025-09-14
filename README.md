@@ -24,11 +24,11 @@
 
 ## 📝 TODO
 
-- [ ] Add Tests
-- [ ] Support for mode models/services (OpenAI, Replicate, fal.ai)
-- [ ] Improve for mobile devices
+- [ ] Support for more models/services (OpenAI, Replicate, fal.ai)
+- [ ] Improve experience for mobile devices
 - [ ] Add "examples" section, with pre-defined prompts
-- [ ] TBD...
+- [ ] Add tests
+- [ ] TBD
 
 ---
 
