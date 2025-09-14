@@ -11,6 +11,8 @@
   <b>Try it</b> at <a href="https://koubou.app/">koubou.app</a>
 </p>
 
+![Koubou Demo](./demo_frame.png)
+
 ---
 
 ## V1 Features
@@ -31,6 +33,7 @@
 ## V2 Roadmap
 
 - [ ] Support for more models/services (OpenAI, Replicate, fal.ai)
+- [ ] Bring-to-Front/Back
 - [ ] Improve experience for mobile devices
 - [ ] Add "examples" section, with pre-defined prompts
 - [ ] Add tests

@@ -77,6 +77,7 @@ function App() {
     handleImageSelect,
     handleImageDragEnd,
     handleImageTransform,
+    pasteCopiedImage,
   } = useImages();
 
   const getCurrentCenterPosition = useCallback(() => {
@@ -119,14 +120,20 @@ function App() {
       const items = (e.clipboardData as DataTransfer)?.items;
       if (!items) return;
 
-      for (let i = 0; i < items.length; i++) {
-        const item = items[i];
-        if (item.type.indexOf("image") !== -1) {
+      const imageItems = Array.from(items).filter(
+        (item) => item.type.indexOf("image") !== -1
+      );
+
+      if (imageItems.length > 0) {
+        for (let i = 0; i < imageItems.length; i++) {
+          const item = imageItems[i];
           const file = item.getAsFile();
           if (file) {
             await addImageToCanvas(file, i, getCurrentCenterPosition);
           }
         }
+      } else {
+        pasteCopiedImage();
       }
     };
 
@@ -135,7 +142,7 @@ function App() {
     return () => {
       document.removeEventListener("paste", handlePaste);
     };
-  }, [addImageToCanvas, getCurrentCenterPosition]);
+  }, [addImageToCanvas, getCurrentCenterPosition, pasteCopiedImage]);
 
   useEffect(() => {
     if (trRef.current) {

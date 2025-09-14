@@ -137,8 +137,14 @@ export function useImages() {
       if (e.metaKey || e.ctrlKey) {
         if (e.key === "c") {
           copySelectedImage();
-        } else if (e.key === "v") {
-          pasteCopiedImage();
+        } else if (e.key === "x") {
+          copySelectedImage();
+          if (selectedImages.size > 0) {
+            setImages((prev) =>
+              prev.filter((img) => !selectedImages.has(img.id))
+            );
+            setSelectedImages(new Set());
+          }
         }
       }
 
@@ -158,7 +164,7 @@ export function useImages() {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [selectedImages, copySelectedImage, pasteCopiedImage]);
+  }, [selectedImages, copySelectedImage, setImages, setSelectedImages]);
 
   return {
     images,
@@ -169,6 +175,7 @@ export function useImages() {
     handleImageSelect,
     handleImageDragEnd,
     handleImageTransform,
+    pasteCopiedImage,
   };
 }
 
