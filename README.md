@@ -4,7 +4,7 @@
 </div>
 
 <p style="padding-top: 20px">
-  A BYOK (Bring Your Own Key) open-source AI canvas for generating, manipulating, and editing images with AI models.
+  A BYOK (Bring Your Own Key) open-source canvas for generating, manipulating, and editing images with AI models.
 </p>
 
 <p>
