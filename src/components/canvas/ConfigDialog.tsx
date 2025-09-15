@@ -224,7 +224,6 @@ export function ConfigDialog({
                         <AlertCircleIcon className="h-4 w-4" />
                         <AlertTitle>Get your API Key</AlertTitle>
                         <AlertDescription>
-                          To get a free API key, visit{" "}
                           <a
                             href="https://aistudio.google.com/apikey"
                             target="_blank"
@@ -232,7 +231,8 @@ export function ConfigDialog({
                             className="underline"
                           >
                             https://aistudio.google.com/apikey
-                          </a>
+                          </a>{" "}
+                          Google requires Billing enabled for Nano Banana
                         </AlertDescription>
                       </Alert>
                       <Alert
