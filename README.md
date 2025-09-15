@@ -43,6 +43,7 @@
 
 - [ ] Support for more models/services (OpenAI, Replicate, fal.ai)
 - [ ] Bring-to-Front/Back
+- [ ] Prompt history
 - [ ] Improve experience for mobile devices
 - [ ] Add "examples" section, with pre-defined prompts
 - [ ] Add tests
